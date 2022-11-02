@@ -18,8 +18,8 @@ spec:
         server: '{{ .Values.generator.server }}'
       project: default
       source:
-        path: applicationsets/cluster-generator/overlays/dev/
-        repoURL: 'https://github.com/christianh814/gitops-examples'
+        path: .
+        repoURL: {{ .Values.spec.source.repoURL }}
         targetRevision: main
       syncPolicy:
         automated:
