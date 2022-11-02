@@ -11,11 +11,11 @@ spec:
             {{ .Values.spec.labelKey }}: {{ .Values.spec.labelValue }}
   template:
     metadata:
-      name: '{{name}}-test'
+      name: '{{ .Values.generator.name }}-test'
     spec:
       destination:
         namespace: appset-declarative-test
-        server: '{{server}}'
+        server: '{{ .Values.generator.server }}'
       project: default
       source:
         path: applicationsets/cluster-generator/overlays/dev/

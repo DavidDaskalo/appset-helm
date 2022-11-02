@@ -8,4 +8,7 @@ spec:
   project: default
   labelKey: test
   labelValue: dev
+generator:
+  name: "{{name}}"
+  server: "{{server}}"
 appsetNamespace: openshift-gitops
