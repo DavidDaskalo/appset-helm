@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: testing-appset-appset
+  namespace: {{ .Values.appsetNamespace }}
+spec:
+  generators:
+    - clusters:
+        selector:
+          matchLabels:
+            {{ .Values.spec.labelKey }}: {{ .Values.spec.labelValue }}
+  template:
+    metadata:
+      name: '{{name}}-test'
+    spec:
+      destination:
+        namespace: appset-declarative-test
+        server: '{{server}}'
+      project: default
+      source:
+        path: applicationsets/cluster-generator/overlays/dev/
+        repoURL: 'https://github.com/christianh814/gitops-examples'
+        targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
