@@ -23,7 +23,7 @@ spec:
         targetRevision: master
         helm:
           valueFiles:
-          - 'values/{{path.basename}}/values.yaml'
+          - 'values/{{ .Values.generator.valuefile }}/values.yaml'
       syncPolicy:
         automated:
           prune: true
