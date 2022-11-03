@@ -12,4 +12,5 @@ spec:
 generator:
   name: "{{name}}"
   server: "{{server}}"
+  valuefile: "{{path.basename}}"
 appsetNamespace: openshift-gitops
