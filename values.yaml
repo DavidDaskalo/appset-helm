@@ -4,7 +4,7 @@ spec:
     namespace: "argo-to-argo-app"
   source:
     path: 04.Application-Lifecycle/exercise-argocd/application-resources/values/*
-    repoURL: https://github.com/michaelkotelnikov/rhacm-workshop
+    repoURL: https://github.com/DavidDaskalo/appset-helm
     targetRevision: HEAD
   project: default
   labelKey: test
