@@ -21,9 +21,6 @@ spec:
         path: {{ .Values.spec.source.path }}
         repoURL: {{ .Values.spec.source.repoURL }}
         targetRevision: master
-        helm:
-          valueFiles:
-          - 'values/{{ .Values.generator.valuefile }}/values.yaml'
       syncPolicy:
         automated:
           prune: true
