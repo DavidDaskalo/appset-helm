@@ -4,7 +4,7 @@ spec:
     namespace: "argo-to-argo-app"
   source:
     path: .
-    repoURL: https://github.com/DavidDaskalo/appset-helm
+    repoURL: https://github.com/christianh814/gitops-examples
     targetRevision: HEAD
   project: default
   labelKey: test
